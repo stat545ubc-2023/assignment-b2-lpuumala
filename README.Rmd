@@ -1,0 +1,68 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# b2lpuumala
+Lauren Puumala  
+2023-11-10  
+<!-- badges: start -->
+<!-- badges: end -->
+
+## Description
+This package contains a function called `count_obs` that can be used to count the number of observations of a categorical variable or combinations of categorical variables in a data frame. It returns the results as a tibble. Relevant documentation, tests, and examples for this function are included in this package as well.  
+  
+**Function specifications:**    
+- Parameters:  
+  - `data`: the data frame  
+  - `group_vars`: categorical variables in `data` to be used for grouping. Grouping variables must belong to one of the following classes: character, factor, or date.  
+- Result: a tibble tabulating the number of observations of the specified categorical grouping variable(s) in `data`.  
+
+**Files and folders in this repo**  
+File/Folder Name | Description
+-----------------|------------
+README.Rmd | This README file (R Markdown version)
+README.md | This README file (GitHub Markdown version)
+.gitignore | Text file to specify which files should not be tracked by Git
+.Rbuildignore | Exclude files from being put in the package
+.Rhistory | History of executed code
+b2lpuumala.Rproj | Rstudio project file for this assignment
+DESCRIPTION | Metadata about the package
+man | Folder containing function documentation
+NAMESPACE | Declares which functions this package exports for external use and which functions it imports from external packages
+R | Folder containing R files with function definitions
+ADD TEST FILES | update later!
+
+
+## Demonstrated Usage  
+```{r error = TRUE}
+#Using the vancouver_trees dataset from datateachr
+#One grouping variable
+count_obs(vancouver_trees, "neighbourhood_name")
+
+#Multiple grouping variables
+count_obs(vancouver_trees, c("neighbourhood_name", "genus_name", "species_name"))
+
+#Error is thrown when group_vars contains at least one variable that is the wrong class
+count_obs(vancouver_trees, "diameter")
+count_obs(vancouver_trees, c("neighbourhood_name", "diameter"))
+```
+
+## Installation
+
+You can install the development version of b2lpuumala from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("stat545ubc-2023/b2lpuumala")
+```

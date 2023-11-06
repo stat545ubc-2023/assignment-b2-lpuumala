@@ -10,11 +10,11 @@ count_obs(data, group_vars, .groups = "drop")
 \item{data}{A data frame;  this parameter was named \code{data} to make it obvious that this should be the
 raw data frame from which the user wants to extract information.}
 
-\item{group_vars}{The grouping variable(s). One or more grouping variables may be used. The grouping
-variables specify which categorical variable(s) in \code{data} the function should count observations in.
-The grouping variable must be of class chr, fct, or date. This parameter was named \code{group_vars} to
-make it obvious that this variable should be used to specify the names of the variables that should
-be used for grouping the data when the function is called.}
+\item{group_vars}{Character vector containing the name(s) of the grouping variable(s). One or more
+grouping variables may be used. The grouping variables specify which categorical variable(s) in \code{data}
+the function should count observations in. The grouping variable must be of class chr, fct, or date.
+This parameter was named \code{group_vars} to make it obvious that this variable should be used to specify
+the names of the variables that should be used for grouping the data when the function is called.}
 }
 \value{
 A tibble listing the number of observations of each value of a categorical variable or
