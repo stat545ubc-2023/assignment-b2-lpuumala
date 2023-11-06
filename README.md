@@ -25,16 +25,19 @@ character, factor, or date.
 specified categorical grouping variable(s) in `data`.
 
 **Files and folders in this repo**  
-File/Folder Name \| Description —————–\|———— README.Rmd \| This README
-file (R Markdown version) README.md \| This README file (GitHub Markdown
-version) .gitignore \| Text file to specify which files should not be
-tracked by Git .Rbuildignore \| Exclude files from being put in the
-package .Rhistory \| History of executed code b2lpuumala.Rproj \|
-Rstudio project file for this assignment DESCRIPTION \| Metadata about
-the package man \| Folder containing function documentation NAMESPACE \|
-Declares which functions this package exports for external use and which
-functions it imports from external packages R \| Folder containing R
-files with function definitions ADD TEST FILES \| update later!
+- README.Rmd: This README file (R Markdown version)  
+- README.md: This README file (GitHub Markdown version)  
+- .gitignore: Text file to specify which files should not be tracked by
+Git  
+- .Rbuildignore: Exclude files from being put in the package  
+- .Rhistory: History of executed code  
+- b2lpuumala.Rproj: Rstudio project file for this assignment  
+- DESCRIPTION: Metadata about the package  
+- man: Folder containing function documentation  
+- NAMESPACE: Declares which functions this package exports for external
+use and which functions it imports from external packages  
+- R: Folder containing R files with function definitions  
+- ADD TEST FILES: update later!
 
 ## Demonstrated Usage
 
