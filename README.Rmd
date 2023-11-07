@@ -45,19 +45,17 @@ This package contains a function called `count_obs` that can be used to count th
 ## Demonstrated Usage  
 ```{r error = TRUE}
 library(b2lpuumala)
-library(datateachr)
-library(dplyr)
 
 #Using the vancouver_trees dataset from datateachr
 #One grouping variable
-count_obs(vancouver_trees, "neighbourhood_name")
+count_obs(datateachr::vancouver_trees, "neighbourhood_name")
 
 #Multiple grouping variables
-count_obs(vancouver_trees, c("neighbourhood_name", "genus_name", "species_name"))
+count_obs(datateachr::vancouver_trees, c("neighbourhood_name", "genus_name", "species_name"))
 
 #Error is thrown when group_vars contains at least one variable that is the wrong class
-count_obs(vancouver_trees, "diameter")
-count_obs(vancouver_trees, c("neighbourhood_name", "diameter"))
+count_obs(datateachr::vancouver_trees, "diameter")
+count_obs(datateachr::vancouver_trees, c("neighbourhood_name", "diameter"))
 ```
 
 ## Installation

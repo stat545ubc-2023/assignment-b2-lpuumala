@@ -43,20 +43,10 @@ use and which functions it imports from external packages
 
 ``` r
 library(b2lpuumala)
-library(datateachr)
-library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
 
 #Using the vancouver_trees dataset from datateachr
 #One grouping variable
-count_obs(vancouver_trees, "neighbourhood_name")
+count_obs(datateachr::vancouver_trees, "neighbourhood_name")
 #> # A tibble: 22 × 2
 #>    neighbourhood_name       num_obs
 #>    <chr>                      <int>
@@ -73,7 +63,7 @@ count_obs(vancouver_trees, "neighbourhood_name")
 #> # ℹ 12 more rows
 
 #Multiple grouping variables
-count_obs(vancouver_trees, c("neighbourhood_name", "genus_name", "species_name"))
+count_obs(datateachr::vancouver_trees, c("neighbourhood_name", "genus_name", "species_name"))
 #> # A tibble: 3,713 × 4
 #>    neighbourhood_name genus_name species_name num_obs
 #>    <chr>              <chr>      <chr>          <int>
@@ -90,10 +80,10 @@ count_obs(vancouver_trees, c("neighbourhood_name", "genus_name", "species_name")
 #> # ℹ 3,703 more rows
 
 #Error is thrown when group_vars contains at least one variable that is the wrong class
-count_obs(vancouver_trees, "diameter")
-#> Error in count_obs(vancouver_trees, "diameter"): Incorrect grouping variable class. Ensure all group_vars are of class chr, fct, or date.
-count_obs(vancouver_trees, c("neighbourhood_name", "diameter"))
-#> Error in count_obs(vancouver_trees, c("neighbourhood_name", "diameter")): Incorrect grouping variable class. Ensure all group_vars are of class chr, fct, or date.
+count_obs(datateachr::vancouver_trees, "diameter")
+#> Error in count_obs(datateachr::vancouver_trees, "diameter"): Incorrect grouping variable class. Ensure all group_vars are of class chr, fct, or date.
+count_obs(datateachr::vancouver_trees, c("neighbourhood_name", "diameter"))
+#> Error in count_obs(datateachr::vancouver_trees, c("neighbourhood_name", : Incorrect grouping variable class. Ensure all group_vars are of class chr, fct, or date.
 ```
 
 ## Installation
