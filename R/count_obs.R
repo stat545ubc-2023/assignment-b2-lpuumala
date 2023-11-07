@@ -15,14 +15,16 @@
 #' This parameter was named `group_vars` to make it obvious that this variable should be used to specify
 #' the names of the variables that should be used for grouping the data when the function is called.
 #'
+#' @param .groups Default value is set to FALSE.
+#'
 #' @return A tibble listing the number of observations of each value of a categorical variable or
 #' combination of categorical variables specified in `group_vars` from the data frame `data`.
 #'
 #' @export
 #'
 #' @examples
-#' count_obs(df, categorical_variable_1)
-#' count_obs(dataframe, c(var1, var2, var3))
+#' count_obs(datateachr::vancouver_trees, "neighbourhood_name")
+#' count_obs(datateachr::vancouver_trees, c("neighbourhood_name", "species_name"))
 
 count_obs <- function(data, group_vars, .groups = 'drop') {
   # Make sure `data` is a data frame
@@ -36,7 +38,7 @@ count_obs <- function(data, group_vars, .groups = 'drop') {
 
   for (i in 1:length(group_vars)) { # loop to check variable classes in group_vars
     if (is.character(data[[group_vars[[i]]]]) == FALSE && is.factor(data[[group_vars[[i]]]]) == FALSE &&
-        is.Date(data[[group_vars[[i]]]]) == FALSE) {
+        lubridate::is.Date(data[[group_vars[[i]]]]) == FALSE) {
       stop('Incorrect grouping variable class. Ensure all group_vars are of class chr, fct, or date.')
     } else {
       i <- i + 1 # if variable is correct type, move onto next variable in group_vars
@@ -45,6 +47,6 @@ count_obs <- function(data, group_vars, .groups = 'drop') {
 
   # Find the number observations for each group and return the summary table
   data |>
-    group_by(pick({{ group_vars }})) |>
-    summarize(num_obs = n(), .groups = .groups)
+    dplyr::group_by(dplyr::pick({{ group_vars }})) |>
+    dplyr::summarize(num_obs = dplyr::n(), .groups = .groups)
 }

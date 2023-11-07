@@ -15,6 +15,8 @@ grouping variables may be used. The grouping variables specify which categorical
 the function should count observations in. The grouping variable must be of class chr, fct, or date.
 This parameter was named \code{group_vars} to make it obvious that this variable should be used to specify
 the names of the variables that should be used for grouping the data when the function is called.}
+
+\item{.groups}{Default value is set to FALSE.}
 }
 \value{
 A tibble listing the number of observations of each value of a categorical variable or
@@ -26,6 +28,6 @@ variable or combination of categorical variables in a specified data frame. The 
 belong to one of the following classes: chr, fct, or date.
 }
 \examples{
-count_obs(df, categorical_variable_1)
-count_obs(dataframe, c(var1, var2, var3))
+count_obs(datateachr::vancouver_trees, "neighbourhood_name")
+count_obs(datateachr::vancouver_trees, c("neighbourhood_name", "species_name"))
 }

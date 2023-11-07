@@ -46,7 +46,7 @@ This package contains a function called `count_obs` that can be used to count th
 ```{r error = TRUE}
 library(b2lpuumala)
 library(datateachr)
-library(tidyverse)
+library(dplyr)
 
 #Using the vancouver_trees dataset from datateachr
 #One grouping variable
