@@ -25,21 +25,21 @@ character, factor, or date.
 specified categorical grouping variable(s) in `data`.
 
 **Files and folders in this repo**  
-- .gitignore: text file to specify which files should not be tracked by
-Git  
-- .Rbuildignore: exclude files from being put in the package  
-- .Rhistory: history of executed code  
-- b2lpuumala.Rproj: Rstudio project file for this assignment  
-- DESCRIPTION: metadata about the package  
-- LICENSE: copyright info  
-- LICESE.md: .md file containing MIT license details  
-- man: folder containing function documentation  
-- NAMESPACE: declares which functions this package exports for external
-use and which functions it imports from external packages  
-- R: folder containing R files with function definitions  
-- README.Rmd: this README file (R Markdown version)  
-- README.md: this README file (GitHub Markdown version)  
-- tests: folder containing function tests
+- **.gitignore:** text file to specify which files should not be tracked
+by Git  
+- **.Rbuildignore:** exclude files from being put in the package  
+- **.Rhistory:** history of executed code  
+- **b2lpuumala.Rproj:** Rstudio project file for this assignment  
+- **DESCRIPTION:** metadata about the package  
+- **LICENSE:** copyright info  
+- **LICESE.md:** .md file containing MIT license details  
+- **man:** folder containing function documentation  
+- **NAMESPACE:** declares which functions this package exports for
+external use and which functions it imports from external packages  
+- **R:** folder containing R files with function definitions  
+- **README.Rmd:** this README file (R Markdown version)  
+- **README.md:** this README file (GitHub Markdown version)  
+- **tests:** folder containing function tests
 
 ## Demonstrated Usage
 
