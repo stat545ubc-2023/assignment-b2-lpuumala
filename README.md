@@ -25,19 +25,21 @@ character, factor, or date.
 specified categorical grouping variable(s) in `data`.
 
 **Files and folders in this repo**  
-- README.Rmd: This README file (R Markdown version)  
-- README.md: This README file (GitHub Markdown version)  
-- .gitignore: Text file to specify which files should not be tracked by
+- .gitignore: text file to specify which files should not be tracked by
 Git  
-- .Rbuildignore: Exclude files from being put in the package  
-- .Rhistory: History of executed code  
+- .Rbuildignore: exclude files from being put in the package  
+- .Rhistory: history of executed code  
 - b2lpuumala.Rproj: Rstudio project file for this assignment  
-- DESCRIPTION: Metadata about the package  
-- man: Folder containing function documentation  
-- NAMESPACE: Declares which functions this package exports for external
+- DESCRIPTION: metadata about the package  
+- LICENSE: copyright info  
+- LICESE.md: .md file containing MIT license details  
+- man: folder containing function documentation  
+- NAMESPACE: declares which functions this package exports for external
 use and which functions it imports from external packages  
-- R: Folder containing R files with function definitions  
-- ADD TEST FILES: update later!
+- R: folder containing R files with function definitions  
+- README.Rmd: this README file (R Markdown version)  
+- README.md: this README file (GitHub Markdown version)  
+- tests: folder containing function tests
 
 ## Demonstrated Usage
 
@@ -93,5 +95,5 @@ You can install the development version of b2lpuumala from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("stat545ubc-2023/b2lpuumala")
+devtools::install_github("stat545ubc-2023/b2lpuumala", ref = "0.1.0")
 ```
