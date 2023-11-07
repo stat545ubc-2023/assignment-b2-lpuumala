@@ -1,6 +1,6 @@
 Package: b2lpuumala
 Title: Count Observations of a Categorical Variable in a Dataset
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Lauren S.", "Puumala", , "lauren.puumala@ubc.ca", role = c("aut", "cre"))
 Description: This is a simple package containing a function called
