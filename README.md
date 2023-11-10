@@ -81,10 +81,11 @@ count_obs(datateachr::vancouver_trees, c("neighbourhood_name", "genus_name", "sp
 #>  9 ARBUTUS-RIDGE      ACER       MACROPHYLLUM      10
 #> 10 ARBUTUS-RIDGE      ACER       NEGUNDO            4
 #> # ℹ 3,703 more rows
-
-#Error is thrown when group_vars contains at least one variable that is the wrong class
+  
+#Error is thrown when group_vars contains at least one variable that is the wrong class. See examples below.
 count_obs(datateachr::vancouver_trees, "diameter")
 #> Error in count_obs(datateachr::vancouver_trees, "diameter"): Incorrect grouping variable class. Ensure all group_vars are of class chr, fct, or date.
+
 count_obs(datateachr::vancouver_trees, c("neighbourhood_name", "diameter"))
 #> Error in count_obs(datateachr::vancouver_trees, c("neighbourhood_name", : Incorrect grouping variable class. Ensure all group_vars are of class chr, fct, or date.
 ```
