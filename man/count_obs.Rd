@@ -28,6 +28,11 @@ variable or combination of categorical variables in a specified data frame. The 
 belong to one of the following classes: chr, fct, or date.
 }
 \examples{
+library(datateachr)
+
+#count number of observations of one categorical variable
 count_obs(datateachr::vancouver_trees, "neighbourhood_name")
+
+#count number of observations of two categorical variables
 count_obs(datateachr::vancouver_trees, c("neighbourhood_name", "species_name"))
 }

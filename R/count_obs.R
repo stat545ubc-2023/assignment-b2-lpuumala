@@ -23,7 +23,12 @@
 #' @export
 #'
 #' @examples
+#' library(datateachr)
+#'
+#' #count number of observations of one categorical variable
 #' count_obs(datateachr::vancouver_trees, "neighbourhood_name")
+#'
+#' #count number of observations of two categorical variables
 #' count_obs(datateachr::vancouver_trees, c("neighbourhood_name", "species_name"))
 
 count_obs <- function(data, group_vars, .groups = 'drop') {

@@ -39,7 +39,8 @@ external use and which functions it imports from external packages
 - **R:** folder containing R files with function definitions  
 - **README.Rmd:** this README file (R Markdown version)  
 - **README.md:** this README file (GitHub Markdown version)  
-- **tests:** folder containing function tests
+- **tests:** folder containing function tests  
+- **NEWS.md:** news file with development notes
 
 ## Demonstrated Usage
 
