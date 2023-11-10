@@ -49,13 +49,15 @@ This package contains a function called `count_obs` that can be used to count th
 ```{r error = TRUE}
 library(b2lpuumala)
 
+#CORRECT USAGE
 #Using the vancouver_trees dataset from datateachr
 #One grouping variable
 count_obs(datateachr::vancouver_trees, "neighbourhood_name")
 
 #Multiple grouping variables
 count_obs(datateachr::vancouver_trees, c("neighbourhood_name", "genus_name", "species_name"))
-  
+
+#INCORRECT USAGE  
 #Error is thrown when group_vars contains at least one variable that is the wrong class. See examples below.
 count_obs(datateachr::vancouver_trees, "diameter")
 
